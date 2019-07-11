@@ -8,6 +8,7 @@ import dagger.Provides
 import okhttp3.ConnectionSpec
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.TlsVersion
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -37,6 +38,7 @@ class RemoteDataModule(var baseURL : String = BuildConfig.KeAppBaseURL) {
             .connectionSpecs(
                 arrayListOf(
                     ConnectionSpec.MODERN_TLS,
+                    ConnectionSpec.CLEARTEXT,
                     ConnectionSpec.COMPATIBLE_TLS)
             )
             .followRedirects(true)
@@ -47,8 +49,8 @@ class RemoteDataModule(var baseURL : String = BuildConfig.KeAppBaseURL) {
             .writeTimeout(30, TimeUnit.SECONDS)
             .cache(null)
             .build()
-    }
 
+}
 
     @Provides
     @Singleton
