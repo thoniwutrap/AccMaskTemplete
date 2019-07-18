@@ -7,8 +7,9 @@ import com.teerap.codelab.aacmasktemplete.dialog.ProgressDialog
 
 fun AppCompatActivity.initDialog() : ProgressDialog {
     var progressDialog = ProgressDialog.shared()
-    progressDialog.let {
+    progressDialog.also {
         it.isCancelable = false
         return it
     }
 }
+

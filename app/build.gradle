@@ -76,6 +76,12 @@ dependencies {
     implementation deps.retrofit2.rx_java2_adapter
 
 
+    //Rx
+    implementation deps.rx.rxjava
+    implementation deps.rx.rxkotlin
+    implementation deps.rx.rxandroid
+
+
     //Room
     implementation deps.room.runtime
     kapt deps.room.compiler
@@ -84,6 +90,7 @@ dependencies {
     //ViewModel and LiveData
     implementation deps.lifecycle.extensions
     kapt deps.lifecycle.compiler
+
 
 
     //Dependency Injection
