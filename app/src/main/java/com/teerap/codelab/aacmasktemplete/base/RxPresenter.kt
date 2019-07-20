@@ -1,4 +1,4 @@
-package com.krungsri.uchoose.core
+package com.teerap.codelab.aacmasktemplete.base
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver

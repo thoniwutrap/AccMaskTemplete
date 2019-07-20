@@ -15,13 +15,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
-class RemoteDataModule(var baseURL : String = BuildConfig.KeAppBaseURL) {
-
-
-    @Provides
-    @Singleton
-    fun provideAPIServices(retrofit: Retrofit): OtpApi
-            = retrofit.create(OtpApi::class.java)
+class NetworkModule(var baseURL : String = BuildConfig.KeAppBaseURL) {
 
 
     @Provides
