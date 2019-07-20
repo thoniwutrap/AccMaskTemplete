@@ -8,8 +8,9 @@ import dagger.Provides
 
 @Module
 class OtpDataSourceNetworkModule {
+
 	@Provides
-	fun provideOtpDataSourceNetwork(api : OtpApi) : OtpDataSource
-			= OtpDataSourceNetwork(api)
+	fun provideOtpDataSourceNetwork(dataSourceNetwork: OtpDataSourceNetwork) : OtpDataSource
+			= OtpRepository(dataSourceNetwork)
 
 }

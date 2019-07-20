@@ -1,9 +1,12 @@
 package com.teerap.codelab.aacmasktemplete.otp
 
 import androidx.lifecycle.ViewModelProviders
+import com.krungsri.uchoose.core.UseCase
 import com.teerap.codelab.aacmasktemplete.otp.datasource.OtpDataSource
 import com.teerap.codelab.aacmasktemplete.otp.datasource.network.OtpApi
 import com.teerap.codelab.aacmasktemplete.otp.datasource.network.OtpDataSourceNetwork
+import com.teerap.codelab.aacmasktemplete.otp.domain.RequestOTPUseCase
+import com.teerap.codelab.aacmasktemplete.otp.domain.model.OtpResponse
 import com.teerap.codelab.aacmasktemplete.otp.presenter.OtpActivity
 import com.teerap.codelab.aacmasktemplete.otp.presenter.OtpContract
 import com.teerap.codelab.aacmasktemplete.otp.presenter.OtpPresenter
@@ -29,5 +32,10 @@ class OtpModule {
 		return ViewModelProviders.of(activity).get(OtpViewModel::class.java)
 	}
 
+
+	@Provides
+	fun provideOtpUseCase(requestOTPUseCase: RequestOTPUseCase) :  UseCase<String, OtpResponse>{
+		return requestOTPUseCase
+	}
 
 }

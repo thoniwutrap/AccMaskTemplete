@@ -7,6 +7,7 @@ import io.reactivex.Observable
 import javax.inject.Inject
 
 class RequestOTPUseCase @Inject constructor(private val remoteSource: OtpDataSource) : UseCase<String, OtpResponse>() {
+
     override fun createObservable(request: String): Observable<OtpResponse> {
         return remoteSource.requestOtp(request)
     }
