@@ -1,6 +1,7 @@
 package com.teerap.codelab.aacmasktemplete
 
 import android.app.Application
+import com.teerap.codelab.aacmasktemplete.data.di.AppModule
 import com.teerap.codelab.aacmasktemplete.data.di.ContributorModule
 import com.teerap.codelab.aacmasktemplete.data.di.RemoteDataModule
 import dagger.BindsInstance
@@ -13,6 +14,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [
     AndroidSupportInjectionModule::class,
+    AppModule::class,
     RemoteDataModule::class,
     ContributorModule::class])
 
