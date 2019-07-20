@@ -1,5 +1,6 @@
-package com.krungsri.uchoose.core
+package com.teerap.codelab.aacmasktemplete.base
 
+import com.krungsri.uchoose.core.Interactor
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo

@@ -1,6 +1,6 @@
 package com.teerap.codelab.aacmasktemplete.otp.domain
 
-import com.krungsri.uchoose.core.UseCase
+import com.teerap.codelab.aacmasktemplete.base.UseCase
 import com.teerap.codelab.aacmasktemplete.otp.datasource.OtpDataSource
 import com.teerap.codelab.aacmasktemplete.otp.domain.model.OtpResponse
 import io.reactivex.Observable
