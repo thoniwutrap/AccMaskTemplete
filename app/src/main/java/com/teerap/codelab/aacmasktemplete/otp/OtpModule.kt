@@ -13,6 +13,7 @@ import dagger.Provides
 
 @Module
 class OtpModule {
+
 	@Provides
 	fun providePresenter(presenter: OtpPresenter): OtpContract.UserAcition {
 		return presenter
@@ -25,12 +26,8 @@ class OtpModule {
 
 	@Provides
 	fun provideViewModel(activity: OtpActivity) : OtpViewModel {
-		return ViewModelProviders.of(activity)
-				.get(OtpViewModel::class.java)
+		return ViewModelProviders.of(activity).get(OtpViewModel::class.java)
 	}
 
-	@Provides
-	fun provideOtpDataSourceNetwork(api : OtpApi) : OtpDataSource
-			= OtpDataSourceNetwork(api)
 
 }

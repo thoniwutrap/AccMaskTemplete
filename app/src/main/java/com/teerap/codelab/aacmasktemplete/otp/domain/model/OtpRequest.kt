@@ -1,4 +1,4 @@
-package kerry.express.th.mobile.tracking.api.pojo.otp
+package com.teerap.codelab.aacmasktemplete.otp.domain.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
