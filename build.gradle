@@ -6,6 +6,7 @@ buildscript {
     dependencies {
         classpath deps.android_gradle_plugin
         classpath deps.kotlin_gradle_plugin
+        classpath deps.navigation
     }
     repositories {
         google()

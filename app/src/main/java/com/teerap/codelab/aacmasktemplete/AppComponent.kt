@@ -3,6 +3,7 @@ package com.teerap.codelab.aacmasktemplete
 import android.app.Application
 import com.teerap.codelab.aacmasktemplete.data.di.AppModule
 import com.teerap.codelab.aacmasktemplete.data.di.ContributorModule
+import com.teerap.codelab.aacmasktemplete.data.di.LocalDataModule
 import com.teerap.codelab.aacmasktemplete.data.di.NetworkModule
 import dagger.BindsInstance
 import dagger.Component
@@ -16,6 +17,7 @@ import javax.inject.Singleton
     AndroidSupportInjectionModule::class,
     AppModule::class,
     NetworkModule::class,
+    LocalDataModule::class,
     ContributorModule::class])
 
 interface AppComponent  : AndroidInjector<MainApplication>{

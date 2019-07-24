@@ -2,10 +2,10 @@ package com.teerap.codelab.aacmasktemplete.otp
 
 import androidx.lifecycle.ViewModelProviders
 import com.teerap.codelab.aacmasktemplete.base.UseCase
+import com.teerap.codelab.aacmasktemplete.data.local.entity.User
 import com.teerap.codelab.aacmasktemplete.otp.domain.RequestOTPUseCase
 import com.teerap.codelab.aacmasktemplete.otp.domain.VerifyOTPUseCase
 import com.teerap.codelab.aacmasktemplete.otp.domain.model.OtpResponse
-import com.teerap.codelab.aacmasktemplete.otp.domain.model.VerifyOtpResponse
 import com.teerap.codelab.aacmasktemplete.otp.presenter.OtpActivity
 import com.teerap.codelab.aacmasktemplete.otp.presenter.OtpContract
 import com.teerap.codelab.aacmasktemplete.otp.presenter.OtpPresenter
@@ -38,7 +38,7 @@ class OtpModule {
 	}
 
 	@Provides
-	fun provideVerifyOtp(verifyOTPUseCase: VerifyOTPUseCase) : UseCase<VerifyOTPUseCase.Request, VerifyOtpResponse>{
+	fun provideVerifyOtp(verifyOTPUseCase: VerifyOTPUseCase) : UseCase<VerifyOTPUseCase.Request, User>{
 		return verifyOTPUseCase
 	}
 }

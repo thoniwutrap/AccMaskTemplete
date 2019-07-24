@@ -19,4 +19,5 @@ abstract class UseCase<REQUEST, RESPONSE> : Interactor<REQUEST, RESPONSE> {
 	override fun execute(request: REQUEST): Observable<RESPONSE> {
 		return createObservable(request)
 	}
+
 }

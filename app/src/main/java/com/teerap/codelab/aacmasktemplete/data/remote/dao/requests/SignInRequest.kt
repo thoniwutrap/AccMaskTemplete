@@ -10,5 +10,6 @@ data class SignInRequest(
     @SerializedName( "password")
     val password: String? = null
 
+
 )
 

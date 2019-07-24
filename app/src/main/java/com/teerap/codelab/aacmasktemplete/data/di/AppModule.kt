@@ -10,4 +10,5 @@ class AppModule {
 
 	@Provides
 	fun provideRxPresenter() : CompositeDisposable = CompositeDisposable()
+
 }

@@ -2,9 +2,9 @@ package com.teerap.codelab.aacmasktemplete.otp.presenter
 
 import com.teerap.codelab.aacmasktemplete.base.RxPresenter
 import com.teerap.codelab.aacmasktemplete.base.UseCase
+import com.teerap.codelab.aacmasktemplete.data.local.entity.User
 import com.teerap.codelab.aacmasktemplete.otp.domain.VerifyOTPUseCase
 import com.teerap.codelab.aacmasktemplete.otp.domain.model.OtpResponse
-import com.teerap.codelab.aacmasktemplete.otp.domain.model.VerifyOtpResponse
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -14,10 +14,11 @@ import javax.inject.Inject
 
 class OtpPresenter @Inject constructor(private val view: OtpContract.View,
                                        private val requestOTPUseCase: UseCase<String, OtpResponse>,
-                                       private val verifyOTPUseCase: UseCase<VerifyOTPUseCase.Request, VerifyOtpResponse>,
+                                       private val verifyOTPUseCase: UseCase<VerifyOTPUseCase.Request, User>,
                                        private val viewModel: OtpViewModel,
                                        compositeDisposable: CompositeDisposable)
 	: RxPresenter(compositeDisposable) ,OtpContract.UserAcition {
+
 
 
 	override fun requestOTP() {
