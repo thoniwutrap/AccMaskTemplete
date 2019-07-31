@@ -1,9 +1,9 @@
 package com.teerap.codelab.aacmasktemplete.data.di
 
 import com.teerap.codelab.aacmasktemplete.BuildConfig
-import com.teerap.codelab.aacmasktemplete.data.remote.APIServices
 import com.teerap.codelab.aacmasktemplete.data.remote.AuthenticationInterceptor
 import com.teerap.codelab.aacmasktemplete.data.remote.HeaderInterceptor
+import com.teerap.codelab.aacmasktemplete.otp.datasource.network.OtpApi
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -15,13 +15,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
-class RemoteDataModule(var baseURL : String = BuildConfig.KeAppBaseURL) {
-
-
-    @Provides
-    @Singleton
-    fun provideAPIServices(retrofit: Retrofit): APIServices
-            = retrofit.create(APIServices::class.java)
+class NetworkModule(var baseURL : String = BuildConfig.KeAppBaseURL) {
 
 
     @Provides

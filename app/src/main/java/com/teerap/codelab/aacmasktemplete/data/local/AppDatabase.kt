@@ -7,9 +7,9 @@ import com.teerap.codelab.aacmasktemplete.data.local.query.UserDao
 
 
 @Database(
-    entities = [User::class],
-    version = 1
+		entities = [User::class],
+		version = 1
 )
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): UserDao
+	abstract fun userDao(): UserDao
 }
