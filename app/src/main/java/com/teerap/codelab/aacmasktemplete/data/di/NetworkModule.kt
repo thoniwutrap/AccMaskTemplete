@@ -1,5 +1,6 @@
 package com.teerap.codelab.aacmasktemplete.data.di
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.teerap.codelab.aacmasktemplete.BuildConfig
 import com.teerap.codelab.aacmasktemplete.data.remote.AuthenticationInterceptor
 import com.teerap.codelab.aacmasktemplete.data.remote.HeaderInterceptor
@@ -29,6 +30,7 @@ class NetworkModule(var baseURL : String = BuildConfig.KeAppBaseURL) {
             .authenticator(AuthenticationInterceptor())
             .addInterceptor(HeaderInterceptor())
             .addInterceptor(logger)
+            .addNetworkInterceptor(StethoInterceptor())
             .followRedirects(true)
             .followSslRedirects(true)
             .retryOnConnectionFailure(true)

@@ -13,13 +13,11 @@ import javax.inject.Singleton
 @Module
 class LocalDataModule() {
 
-	val DATABASE_FILE_NAME = "tr-aac-db"
-
+	val DATABASE_FILE_NAME = "teerap"
 
 	@Provides
 	@Singleton
 	fun provideUserDao(db: AppDatabase): UserDao = db.userDao()
-
 
 
 	@Provides

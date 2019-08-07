@@ -2,7 +2,9 @@ package com.teerap.codelab.aacmasktemplete.login.presenter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
+import com.amitshekhar.DebugDB
 import com.teerap.codelab.aacmasktemplete.R
 import com.teerap.codelab.aacmasktemplete.databinding.ActivityLoginBinding
 import dagger.android.support.DaggerAppCompatActivity
@@ -28,6 +30,7 @@ class LoginActivity : DaggerAppCompatActivity(),LoginContract.View {
 		}
 
 		btnUser.setOnClickListener {
+			Log.e("POORT",DebugDB.getAddressLog())
 			presenter.getUser()
 		}
 	}

@@ -36,6 +36,7 @@ android {
             buildConfigField 'String', 'KeAppBaseURL', POC_KeAppBaseURL
             buildConfigField 'String', 'KeAppID', POC_KeAppID
             buildConfigField 'String', 'KeAppKey', POC_KeAppKey
+            resValue("string", "PORT_NUMBER", "8083")
         }
         release {
             minifyEnabled true
@@ -111,4 +112,11 @@ dependencies {
     androidTestImplementation deps.support.test.espresso
     implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.facebook.stetho:stetho-urlconnection:1.5.1'
+
 }
