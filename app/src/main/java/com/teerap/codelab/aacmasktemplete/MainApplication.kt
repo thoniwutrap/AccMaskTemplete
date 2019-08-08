@@ -15,8 +15,11 @@ class MainApplication : DaggerApplication() {
 
     override fun onCreate() {
         super.onCreate()
+<<<<<<< Updated upstream
         Stetho.initializeWithDefaults(this);
         Log.d("","")
+=======
+>>>>>>> Stashed changes
 
     }
 
