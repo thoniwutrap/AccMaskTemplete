@@ -30,7 +30,6 @@ class LoginActivity : DaggerAppCompatActivity(),LoginContract.View {
 		}
 
 		btnUser.setOnClickListener {
-			Log.e("POORT",DebugDB.getAddressLog())
 			presenter.getUser()
 		}
 	}
