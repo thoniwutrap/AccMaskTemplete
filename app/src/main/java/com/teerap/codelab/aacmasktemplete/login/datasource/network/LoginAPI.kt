@@ -4,6 +4,7 @@ import com.teerap.codelab.aacmasktemplete.data.local.entity.User
 import com.teerap.codelab.aacmasktemplete.login.domain.model.LoginRequest
 import io.reactivex.Observable
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface LoginAPI {

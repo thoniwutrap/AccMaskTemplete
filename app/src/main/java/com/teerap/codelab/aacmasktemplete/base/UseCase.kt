@@ -20,4 +20,6 @@ abstract class UseCase<REQUEST, RESPONSE> : Interactor<REQUEST, RESPONSE> {
 		return createObservable(request)
 	}
 
+
+
 }
